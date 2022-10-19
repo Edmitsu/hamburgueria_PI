@@ -15,12 +15,13 @@
 
 <style scoped>
   .message-container {
-    color: #004085;
-    background-color: #cce5ff;
-    border: 2px solid #b8daff;
+    color: #f7a901;
+    background-color: #0032a0;
+    border: 2px solid #0032a0;
     border-radius: 5px;
     padding: 10px;
     max-width: 400px;
     margin: 30px auto;
+    text-align: center;
   }
 </style>

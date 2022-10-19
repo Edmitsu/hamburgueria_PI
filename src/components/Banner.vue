@@ -1,33 +1,31 @@
 <template>
   <div class="main__banner">
-    <h1 class="main__text">Hamburgueria PI</h1>
+    <BurgerForm>
+    </BurgerForm>
   </div>
 </template>
 
-<script>
+<script> 
+import BurgerForm from './BurgerForm.vue';
   export default {
-    name: "Banner"
-  }
+    name: "Banner",
+    components: { BurgerForm }
+}
 </script>
 
 <style scoped>
-
   .main__banner {
     background-image: url('/img/burger.jpg');
     background-position: center;
     background-size: cover;
-    height: 500px;
+    background-repeat: no-repeat;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;  
+    min-height: fit-content;
+    
   }
-  .main__text{
-    max-width: 75%;
-    color: #f5ebdc ;
-    text-align: center;
-    background-color: #D01C1F ;
-    padding: 20px 40px;
-    border-radius: 5%;
-  }
+ 
+  
 
 </style>

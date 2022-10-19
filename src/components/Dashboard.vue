@@ -1,37 +1,46 @@
 <template>
-  <div id="burger-table" v-if="burgers">
+  <div class="burger-table" v-if="pedidos">
     <div>
-      <div id="burger-table-heading">
-        <div class="order-id">#:</div>
+      <div class="burger-table-heading">
+        <div class="order-id">Numero do Pedido:</div>
         <div>Cliente:</div>
         <div>Pão:</div>
         <div>Carne:</div>
         <div>Opcionais:</div>
+        <div>Bebida:</div>
+        <div>Acompanhamento:</div>
         <div>Ações:</div>
       </div>
     </div>
-    <div id="burger-table-rows">
-      <div class="burger-table-row" v-for="burger in burgers" :key="burger.id">
-        <div class="order-number">{{ burger.id }}</div>
-        <div>{{ burger.nome }}</div>
-        <div>{{ burger.pao }}</div>
-        <div>{{ burger.carne }}</div>
+    <div class="burger-table-rows">
+      <div class="burger-table-row" v-for="pedido in pedidos" :key="pedido.id">
+        <div class="order-number">{{ pedido.id }}</div>
+        <div>{{ pedido.nome }}</div>
+        <div>{{ pedido.pao }}</div>
+        <div>{{ pedido.carne }}</div>
         <div>
-          <ul v-for="(opcional, index) in burger.opcionais" :key="index">
+          <ul v-for="(opcional, index) in pedido.opcionais" :key="index">
             <li>{{ opcional }}</li>
           </ul>
         </div>
+        <div>{{ pedido.bebida }}</div>
+        <div>{{ pedido.porcao }}</div>
+        
+
         <div>
-          <select name="status" class="status" @change="updateBurger($event, burger.id)">
-            <option :value="s.tipo" v-for="s in status" :key="s.id" :selected="burger.status == s.tipo">
+          <select name="status" class="status" @change="updateBurger($event, pedido.id)">
+            <option :value="s.tipo" v-for="s in status" :key="s.id" :selected="pedido.status == s.tipo">
               {{ s.tipo }}
             </option>
           </select>
-          <button class="delete-btn" @click="deleteBurger(burger.id)">Cancelar</button>
+
+          <button class="delete-btn" @click="deleteBurger(pedido.id)">Cancelar</button>
+
         </div>
       </div>
     </div>
   </div>
+
   <div v-else>
     <h2>Não há pedidos no momento!</h2>
   </div>
@@ -41,18 +50,18 @@
     name: "Dashboard",
     data() {
       return {
-        burgers: null,
-        burger_id: null,
+        pedidos: null,
+        pedido_id: null,
         status: []
       }
     },
     methods: {
       async getPedidos() {
-        const req = await fetch('http://localhost:3000/burgers')
+        const req = await fetch('http://localhost:3000/pedidos')
 
         const data = await req.json()
 
-        this.burgers = data
+        this.pedidos = data
 
         // Resgata os status de pedidos
         this.getStatus()
@@ -69,7 +78,7 @@
       },
       async deleteBurger(id) {
 
-        const req = await fetch(`http://localhost:3000/burgers/${id}`, {
+        const req = await fetch(`http://localhost:3000/pedidos/${id}`, {
           method: "DELETE"
         });
 
@@ -84,7 +93,7 @@
 
         const dataJson = JSON.stringify({status: option});
 
-        const req = await fetch(`http://localhost:3000/burgers/${id}`, {
+        const req = await fetch(`http://localhost:3000/pedidos/${id}`, {
           method: "PATCH",
           headers: { "Content-Type" : "application/json" },
           body: dataJson
@@ -103,19 +112,19 @@
 </script>
 
 <style scoped>
-  #burger-table {
+  .burger-table {
     max-width: 1200px;
     margin: 0 auto;
   }
 
-  #burger-table-heading,
-  #burger-table-rows,
+  .burger-table-heading,
+  .burger-table-rows,
   .burger-table-row {
     display: flex;
     flex-wrap: wrap;
   }
 
-  #burger-table-heading {
+  .burger-table-heading {
     font-weight: bold;
     padding: 12px;
     border-bottom: 3px solid #333;
@@ -127,24 +136,28 @@
     border-bottom: 1px solid #CCC;
   }
 
-  #burger-table-heading div,
+  .burger-table-heading div,
   .burger-table-row div {
-    width: 19%;
+    width: 10%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 
-  #burger-table-heading .order-id,
+  .burger-table-heading .order-id,
   .burger-table-row .order-number {
-    width: 5%;
+    width: 10%;
   }
 
-  select {
+  .status {
     padding: 12px 6px;
     margin-right: 12px;
   }
 
   .delete-btn {
-    background-color: #222;
-    color:#fcba03;
+    background-color: #0032a0;
+    color:#f5ebdc;
     font-weight: bold;
     border: 2px solid #222;
     padding: 10px;
@@ -156,7 +169,7 @@
   
   .delete-btn:hover {
     background-color: transparent;
-    color: #222;
+    color: #D01C1F;
   }
   
 </style>

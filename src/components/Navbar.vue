@@ -1,9 +1,11 @@
 <template>
   <div>
     <div class="nav">
-      <router-link id="logo-url" to="/">
-        <img class="logo" :src="logo" :alt="alt">
+      <router-link class="logo__url" to="/">
+        <img class="logo" :src="logo" :alt="alt"> 
+        <h1 class="main__text">Lanche.on.Net</h1>
       </router-link>
+      <router-link class="nav_button" to="/combos">Combos</router-link>
       <router-link class="nav_button" to="/">Fazer Pedido</router-link>
       <router-link class="nav_button" to="/pedidos">Pedidos</router-link>
     </div>
@@ -20,7 +22,8 @@ export default {
 
 <style scoped>
   .nav {
-    background-color: #f5ebdc ;
+    font-family: Flame-Regular;
+    background-color: #f5ebdc;
     border-bottom: 4px solid #111;
     padding: 15px 50px;
     display: flex;
@@ -28,7 +31,10 @@ export default {
     align-items: center;
   }
 
-  .nav #logo-url {
+  .nav .logo__url {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin: auto;
     margin-left: 0;
   }
@@ -39,23 +45,36 @@ export default {
   }
 
   .nav a {
-    color: #f5ebdc ;
+    color: #502314 ;
     text-decoration: none;
     margin: 12px;
     transition: .5s;
+    border-radius: 50px;
+    color: #f5ebdc;    
+    font-weight: bolder;
   }
 
   .nav a:hover {
-    background-color: transparent;
-    color: #D01C1F;
+    color: #f7a901;
     font-weight: bold;
   }
 
   .nav_button{
-    background-color: #0032a0 ;
+    background-color: #502314 ;
     padding: 10px;
     border-radius: 4%;
-    border-color: #f5ebdc ;
+    border-color:  transparent ;
     flex-direction: row;
   }
+  .main__text{
+    display: flex;
+    min-width: 30%;
+    color: #f5ebdc;    
+    background-color: rgba(150,38,38,0.75);
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 2px;
+    margin: 2px;
+  } 
 </style>

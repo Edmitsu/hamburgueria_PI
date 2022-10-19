@@ -54,12 +54,50 @@
         "tipo": "Tomate"
       },
       {
-        "id": 4,
+        "id": 5,
         "tipo": "Cebola roxa"
       },
       {
-        "id": 4,
+        "id": 6,
         "tipo": "Pepino"
+      }
+    ]
+  },
+  "acompanhamentos": {
+    "bebidas": [
+      {
+        "id": 1,
+        "tipo": "Coca Cola"
+      },
+      {
+        "id": 2,
+        "tipo": "Fanta Laranja"
+      },
+      {
+        "id": 3,
+        "tipo": "Suco de Uva"
+      },
+      {
+        "id": 4,
+        "tipo": "Chá Gelado"
+      }
+    ],
+    "porcoes": [
+      {
+        "id": 1,
+        "tipo": "Batata Pequena"
+      },
+      {
+        "id": 2,
+        "tipo": "Batata Média"
+      },
+      {
+        "id": 3,
+        "tipo": "Batata Grande"
+      },
+      {
+        "id": 4,
+        "tipo": "Onion Rings"
       }
     ]
   },
@@ -77,17 +115,34 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": [
+  "pedidos": [
     {
-      "nome": "Jorge ben jor",
-      "carne": "Maminha",
-      "pao": "3 Queijos",
+      "nome": "Jorusa",
+      "carne": "Veggie burger",
+      "pao": "Parmesão e Orégano",
       "opcionais": [
         "Bacon",
-        "Cheddar"
+        "Salame",
+        "Pepino"
       ],
+      "bebida": "Suco de Uva",
+      "porcao": "Onion Rings",
       "status": "Solicitado",
       "id": 1
+    },
+    {
+      "nome": "lucoso",
+      "carne": "Veggie burger",
+      "pao": "Integral",
+      "opcionais": [
+        "Bacon",
+        "Salame",
+        "Cebola roxa"
+      ],
+      "bebida": "Suco de Uva",
+      "porcao": "Batata Grande",
+      "status": "Solicitado",
+      "id": 2
     }
   ]
 }
