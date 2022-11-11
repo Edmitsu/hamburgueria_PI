@@ -2,14 +2,14 @@
   <div class="burger-table" v-if="pedidos">
     <div>
       <div class="burger-table-heading">
-        <div class="order-id">Numero do Pedido:</div>
-        <div>Cliente:</div>
-        <div>Pão:</div>
-        <div>Carne:</div>
-        <div>Opcionais:</div>
-        <div>Bebida:</div>
-        <div>Acompanhamento:</div>
-        <div>Ações:</div>
+        <div class="order-id">Numero do Pedido</div>
+        <div>Cliente</div>
+        <div>Pão</div>
+        <div>Carne</div>
+        <div>Opcionais</div>
+        <div>Bebida</div>
+        <div>Acompanhamento</div>
+        <div>Ações</div>
       </div>
     </div>
     <div class="burger-table-rows">
@@ -27,7 +27,7 @@
         <div>{{ pedido.porcao }}</div>
         
 
-        <div>
+        <div class="actions__container">
           <select name="status" class="status" @change="updateBurger($event, pedido.id)">
             <option :value="s.tipo" v-for="s in status" :key="s.id" :selected="pedido.status == s.tipo">
               {{ s.tipo }}
@@ -125,12 +125,15 @@
   }
 
   .burger-table-heading {
-    font-weight: bold;
     padding: 12px;
+    background-color: #502314;
+    border-radius: 10px;
+    color: white;
+    opacity: 0.6;
     border-bottom: 3px solid #333;
   }
 
-  .burger-table-row {
+  .burger-table-row {    
     width: 100%;
     padding: 12px;
     border-bottom: 1px solid #CCC;
@@ -143,6 +146,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    padding: 12px;
   }
 
   .burger-table-heading .order-id,
@@ -150,13 +154,32 @@
     width: 10%;
   }
 
+  .order-number{
+    padding: 12px;
+    height: 150px;
+    align-items: center;
+    font-weight: 900;
+    font-size: 20px;
+  }
+
+  .actions__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px;
+  }
+
   .status {
-    padding: 12px 6px;
-    margin-right: 12px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    max-width: 150px;
   }
 
   .delete-btn {
-    background-color: #0032a0;
+    background-color: #502314;
     color:#f5ebdc;
     font-weight: bold;
     border: 2px solid #222;
@@ -165,11 +188,12 @@
     margin: 0 auto;
     cursor: pointer;
     transition: .5s;
+    border-radius: 5px;
+    min-width: 150px;
   }
   
   .delete-btn:hover {
-    background-color: transparent;
-    color: #D01C1F;
+    color: #fcba03;
   }
   
 </style>

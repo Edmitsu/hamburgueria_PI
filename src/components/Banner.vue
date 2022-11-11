@@ -1,7 +1,5 @@
 <template>
   <div class="main__banner">
-    <BurgerForm>
-    </BurgerForm>
   </div>
 </template>
 
@@ -15,15 +13,14 @@ import BurgerForm from './BurgerForm.vue';
 
 <style scoped>
   .main__banner {
-    background-image: url('/img/burger.jpg');
+    background-image: url('/home/edmitsu/Hamburgueria_PI/public/img/burger.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: flex-start;  
-    min-height: fit-content;
-    
+    min-height: fit-content;    
   }
  
   

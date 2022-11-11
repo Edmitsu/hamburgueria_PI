@@ -8,9 +8,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/combos',
-    name: 'Combos',
-    component: () => import(/* webpackChunkName: "Combos" */ '../views/Combos.vue')
+    path: '/retirada',
+    name: 'Retirada_pedidos',
+    component: () => import(/* webpackChunkName: "Combos" */ '../views/Retirada_pedidos.vue')
   },
   {
     path: '/pedidos',

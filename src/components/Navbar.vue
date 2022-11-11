@@ -4,8 +4,7 @@
       <router-link class="logo__url" to="/">
         <img class="logo" :src="logo" :alt="alt"> 
         <h1 class="main__text">Lanche.on.Net</h1>
-      </router-link>
-      <router-link class="nav_button" to="/combos">Combos</router-link>
+      </router-link> 
       <router-link class="nav_button" to="/">Fazer Pedido</router-link>
       <router-link class="nav_button" to="/pedidos">Pedidos</router-link>
     </div>

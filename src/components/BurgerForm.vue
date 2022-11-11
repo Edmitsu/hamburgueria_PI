@@ -50,6 +50,7 @@
 
 <script>
 import Message from './Message'
+import Banner from './Banner.vue'
 export default {
   name: "BurgerForm",
   data() {
@@ -121,25 +122,28 @@ export default {
     this.getAcompanhamentos()
   },
   components: {
-    Message
-  }
+    Message,
+    Banner
+}
 }
 </script>
 
 <style scoped>
 
   .form__background{
+    display: flex;
     background-color: #ffc765;       
     border-radius: 5px;
-    margin: 25px;
-    filter: blur(0px);  
+    margin: 15px; 
+    padding: 15px;
   }
   .burger-form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     max-width: 400px;
-    margin: 50px;
+    margin: 10px;
+    padding: 5px;
     min-width: 30%;
   }
   .input-container {

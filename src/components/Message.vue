@@ -16,8 +16,8 @@
 <style scoped>
   .message-container {
     color: #f7a901;
-    background-color: #0032a0;
-    border: 2px solid #0032a0;
+    background-color: #502314;
+    border: 2px solid #502314;
     border-radius: 5px;
     padding: 10px;
     max-width: 400px;
