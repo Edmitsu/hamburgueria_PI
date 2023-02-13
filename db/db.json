@@ -117,31 +117,18 @@
   ],
   "pedidos": [
     {
-      "nome": "Jorusa",
-      "carne": "Veggie burger",
-      "pao": "Parmesão e Orégano",
+      "nome": "Jaime",
+      "carne": "Picanha",
+      "pao": "3 Queijos",
       "opcionais": [
         "Bacon",
-        "Salame",
-        "Pepino"
-      ],
-      "bebida": "Suco de Uva",
-      "porcao": "Onion Rings",
-      "status": "Solicitado",
-      "id": 1
-    },
-    {
-      "nome": "lucoso",
-      "carne": "Veggie burger",
-      "pao": "Integral",
-      "opcionais": [
-        "Bacon",
-        "Salame",
+        "Cheddar",
+        "Tomate",
         "Cebola roxa"
       ],
-      "bebida": "Suco de Uva",
+      "bebida": "Coca Cola",
       "porcao": "Batata Grande",
-      "status": "Solicitado",
+      "status": "Em produção",
       "id": 2
     }
   ]
