@@ -1,5 +1,5 @@
 <template>
-  <Message :msg="msg" v-show="msg" />
+  <Message :msg="msg" v-show="msg"/>
   <div class="form__background">
     <form class="burger-form" method="POST" @submit="createBurger">
       <div class="input-container">
@@ -8,28 +8,28 @@
       </div>
       <div class="input-container">
         <label for="pao">Escolha o Pão:</label>
-        <select name="pao" id="pao" v-model="pao">
+        <select class="burger__select" name="pao" id="pao" v-model="pao">
           <option value="">Selecione o seu pão</option>
           <option v-for="pao in paes" :key="pao.id" :value="pao.tipo">{{ pao.tipo }}</option>
         </select>
       </div>
       <div class="input-container">
         <label for="carne">Escolha a carne do seu Burger:</label>
-        <select name="carne" id="carne" v-model="carne">
+        <select class="burger__select" name="carne" id="carne" v-model="carne">
           <option value="">Selecione o tipo de carne</option>
           <option v-for="carne in carnes" :key="carne.id" :value="carne.tipo">{{ carne.tipo }}</option>
         </select>
       </div>
       <div class="input-container">
         <label for="bebida">Escolha a sua Bebida:</label>
-        <select name="bebida" id="bebida" v-model="bebida">
+        <select class="burger__select" name="bebida" id="bebida" v-model="bebida">
           <option value="">Selecione a Bebida</option>
           <option v-for="bebida in bebidas" :key="bebida.id" :value="bebida.tipo">{{ bebida.tipo }}</option>
         </select>
       </div>
       <div class="input-container">
         <label for="porcao">Escolha o Acompanhamento:</label>
-        <select name="porcao" id="porcao" v-model="porcao">
+        <select class="burger__select" name="porcao" id="porcao" v-model="porcao">
           <option value="">Selecione o acompanhamento</option>
           <option v-for="porcao in porcoes" :key="porcao.id" :value="porcao.tipo">{{ porcao.tipo }}</option>
         </select>
@@ -140,7 +140,6 @@ export default {
   .burger-form {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     max-width: 400px;
     margin: 10px;
     padding: 5px;
@@ -197,4 +196,28 @@ export default {
     transition: .5s;
     border-radius: 20px;
   }
+
+  @media only screen and (max-width: 600px) {
+    body{
+      min-height: 100vh;     
+      display:flex; 
+      flex-direction:column;
+    }
+    .burger-form{
+      display: flex;
+      flex-direction: column;
+      min-width: 30%;
+      max-width: 80vw;
+    }
+    .input-container,
+    .burger__select,
+    input{
+      min-width: 30%;
+      max-width: 70vw;
+    }
+    .form__background{
+      display: flex;
+      max-width: 85vw;
+    }
+  }; 
 </style>

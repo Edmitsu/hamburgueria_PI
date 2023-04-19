@@ -1,22 +1,22 @@
 {
-  "name": "Lanche.on.Net",
+  "name": "lanche_on_net",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "backend": "json-server --watch db/db.json"
+    "backend": "json-server --watch db/db.json --port 3000"
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "json-server": "^0.16.3",
+    "json-server": "^0.4.2",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-plugin-router": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
     "@vue/compiler-sfc": "^3.0.0"
   },
   "browserslist": [

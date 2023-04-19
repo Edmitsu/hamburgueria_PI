@@ -21,19 +21,22 @@ export default {
 
 <style scoped>
 .main__banner {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;      
-  background-image: url('/home/edmitsu/Hamburgueria_PI/public/img/burger.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 800px;
-}
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;      
+      background-image: url('/home/edmitsu/Hamburgueria_PI/public/img/burger.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+    }
 
 .main-container{
+  display: flex;  
+  flex-direction: column;
+  align-items: center;
   background-color: #ffc765;
-  padding: 12px;
+  padding: 25px;
   margin: 0 auto;
   border-radius: 10px;
   font-weight: 600;
@@ -43,10 +46,15 @@ export default {
 
 h1{
   padding: 12px;
-  background-color: #502314;
+  background-color: rgba(80, 35, 20, .8);
   border-radius: 10px;
   color: white;
   width: fit-content;
-  opacity: 0.8;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-container{
+    background-color: transparent;
+  }
 }
 </style>

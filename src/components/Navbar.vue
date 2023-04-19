@@ -76,4 +76,15 @@ export default {
     padding: 2px;
     margin: 2px;
   } 
+
+  @media only screen and (max-width: 600px) {
+    .nav{
+      display: flex;
+      justify-content: center;
+      max-width: 100%;
+    }
+    .main__text{
+      display: none;
+    }
+  }
 </style>

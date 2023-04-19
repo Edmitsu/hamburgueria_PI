@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <p> Lanche.on.net &copy; 2022</p>
+    <p> Lanche.on.net &copy; 2023</p>
   </div>
 </template>
 

@@ -28,7 +28,13 @@ export default {
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      height: 800px;
+      min-height: 100vh;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .main__banner{
+        align-items: center;
+      }
     }
 
 </style>

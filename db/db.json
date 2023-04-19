@@ -128,8 +128,36 @@
       ],
       "bebida": "Coca Cola",
       "porcao": "Batata Grande",
-      "status": "Em produção",
+      "status": "Solicitado",
+      "id": 1
+    },
+    {
+      "nome": "Glauber",
+      "carne": "Alcatra",
+      "pao": "Italiano Branco",
+      "opcionais": [
+        "Bacon",
+        "Tomate",
+        "Cebola roxa"
+      ],
+      "bebida": "Suco de Uva",
+      "porcao": "Batata Grande",
+      "status": "Solicitado",
       "id": 2
+    },
+    {
+      "nome": "Jubirildo",
+      "carne": "Picanha",
+      "pao": "Italiano Branco",
+      "opcionais": [
+        "Bacon",
+        "Salame",
+        "Cheddar"
+      ],
+      "bebida": "Suco de Uva",
+      "porcao": "Batata Grande",
+      "status": "Solicitado",
+      "id": 3
     }
   ]
 }
